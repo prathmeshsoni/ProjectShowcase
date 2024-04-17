@@ -13,11 +13,11 @@
   <title> Prathmesh Soni | Projects </title>
   
   <meta name="author" content="Prathmesh Soni"/>
-  <meta name="description" content=""/>
+  <meta name="description" content="Display project overviews, detailed descriptions, secure password storage, and screenshots in a user-friendly website."/>
   <meta property="og:title" content="Prathmesh Soni"/>
   <meta property="og:site_name" content="Prathmesh Soni Project Showcase Website"/>
   <meta property="og:url" content="projectshowcase.prathmeshsoni.works"/>
-  <meta property="og:description" content="">
+  <meta property="og:description" content="Display project overviews, detailed descriptions, secure password storage, and screenshots in a user-friendly website.">
   <meta property="og:type" content="website"/>
   <meta property="og:image" content="{% static 'assets/img/pretty-snap-25-09-2023.png' %}"/>  
 
@@ -176,7 +176,7 @@
 
         <div class="-m-5 block sm:hidden z-100">
           <nav>
-              <div class="w-full justify-between flex items-center false p-5" style="z-index:101" id="check_0">
+              <div class="w-full justify-between flex items-center false p-4" style="z-index:101" id="check_0">
                   <li class="list-none font-bold text-lg">
                     <span class="font-black text-xl flex items-center">
                       <div class="header__logo-img-cont">
@@ -233,12 +233,12 @@
 
         <div class="row mt-lg-4 mt-2">
           {% for i in projects %}
-            <div class="col-lg-5 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 mb-4">
               <div class="card">
                 <div class="card-body p-3">
                   {% if i.image %}
                     <div class="d-flex">
-                      <a href="{{ i.live }}" target="_blank" style="max-width: max-content; border-radius: .75rem;"
+                      <a href="{{ i.slug_url }}" style="max-width: max-content; border-radius: .75rem;" title="Project: {{ i.title }}"
                         class="w-full mb-2 relative rounded-xl border-fun-gray border p-2 transition hover:-translate-y-2 hover:opacity-75 hover:border-fun-pink will-change-projectCard"
                         bis_size="{&quot;x&quot;:184,&quot;y&quot;:876,&quot;w&quot;:365,&quot;h&quot;:264,&quot;abs_x&quot;:184,&quot;abs_y&quot;:876}"><img
                           class="w-full rounded-md" src="{{ i.image.url }}"
@@ -251,30 +251,28 @@
                   {% endif %}
                   <div class="d-flex" >
                     <div class="mt-3 ms-3">
-                      <a href="{{ i.slug_url }}">
+                      <a href="{{ i.slug_url }}" title="Description of {{ i.title }}">
                         <h6 style="color: #00baf2 !important; font-weight: 600;">{{ i.title|title }}</h6>
                       </a>
                     </div>
                     <div class="ms-auto my-auto">
                       <div class="dropdown">
                         {% if i.quick_view and request.user.is_authenticated %}
-                        <a class="btn btn-link text-secondary ps-0 pe-2 mb-0" href="{{ i.quick_view }}" target="_blank"
-                          id="navbarDropdownMenuLink">
+                        <a class="btn btn-link text-secondary ps-0 pe-2 mb-0" href="{{ i.quick_view }}" target="_blank" title="Quick View">
                           <span>
                             <img src="{% static 'assets/img/view.svg' %}" width="18">
                           </span>
                         </a>
                         {% endif %}
                         {% if i.github %}
-                        <a class="btn btn-link text-secondary ps-0 pe-2 mb-0" href="{{ i.github }}" target="_blank"
-                          id="navbarDropdownMenuLink">
+                        <a class="btn btn-link text-secondary ps-0 pe-2 mb-0" href="{{ i.github }}" target="_blank" title="Github Repository">
                           <span>
                             <img src="{% static 'assets/img/github.svg' %}">
                           </span>
                         </a>
                         {% endif %}
                         {% if i.live %}
-                        <a class="btn btn-link text-secondary ps-0 pe-2 mb-0" href="{{ i.live }}" target="_blank">
+                        <a class="btn btn-link text-secondary ps-0 pe-2 mb-0" href="{{ i.live }}" target="_blank" title="Live Demo">
                           <span>
                             <img src="{% static 'assets/img/external-link.svg' %}">
                           </span>
@@ -287,9 +285,10 @@
                     {{ i.description }}
                   </p>
                   <hr class="horizontal light">
-                  <div class="row">
-                    <div class="display-flex text-left">
-                      {% if request.user.is_authenticated %}
+                  
+                  {% if request.user.is_authenticated %}
+                  <div class="d-flex">
+                    <div class="float-start">
                       <button type="button" class="btn btn-info ms-2 py-1 px-2"
                         style="--tw-bg-opacity: 1; background-color: rgb(25 39 66 / var(--tw-bg-opacity));">
                         {% if i.private %}
@@ -306,9 +305,16 @@
                         Active
                         {% endif %}
                       </button>
-                      {% endif %}
+                    </div>
+                    <div class="ms-auto my-auto">
+                      <button type="button" class="btn btn-info me-2 py-1 px-2"
+                        style="--tw-bg-opacity: 1; background-color: rgb(25 39 66 / var(--tw-bg-opacity));" onclick="window.open('/admin/FrontEndSide/projectmodel/{{ i.id }}/change/', '_blank')"> 
+                        <i class="fas fa-edit" style="color: #00c7ff;"></i>
+                      </button>
                     </div>
                   </div>
+                  {% endif %}
+
                   <div class="row">
                     <div class="display-flex text-left">
                       {% for j in i.tech_stack.all %}
@@ -342,6 +348,7 @@
           <div class="float-end me-4 pe-3 mt-2  mb-3">
             <ul class="list-unstyled text-sm-end social-icon social">                            
               <li class="list-inline-item mb-0"><a href="https://github.com/PrathmeshSoni/ProjectShowcase" target="_blank" class="rounded"><i class="fas fa-code" title="Source Code" aria-hidden="true"></i><span class="sr-only">Source Code</span></a></li>
+              <li class="list-inline-item mb-0"><a href="https://github.com/PrathmeshSoni" target="_blank" class="rounded"><i class="fab fa-github" title="Github" aria-hidden="true"></i><span class="sr-only">Github</span></a></li>
               <li class="list-inline-item mb-0"><a href="mailto:connect.prathmeshsoni@gmail.com" target="_blank" class="rounded"><i class="fas fa-envelope" title="Mail" aria-hidden="true"></i><span class="sr-only">Mail</span></a></li>
             </ul>
           </div>
