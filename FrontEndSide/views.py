@@ -14,6 +14,10 @@ def home(request):
     return render(request, 'projects.html', items)
 
 
+def login(request):
+    return redirect('/admin/login/?next=/')
+
+
 def project_details(request, url):
     # url = '/music-club/'
     url = f'/{url}/'
