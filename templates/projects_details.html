@@ -403,12 +403,12 @@
                           <h6 class="mb-0">Credentials: </h6>
                         </div>
                         <div class="card-body py-2 p-3">
-                          <div class="d-flex">
+                          <div class="col-md-12">
                             <div class="row">
                               {% for k in i.credentials.all %}
-                                <div class="col-lg-4 col-md-6 mb-4">
-                                    <span class="text-xs">Username: <span class="text-dark ms-sm-2 font-weight-bold">{{ k.username }}</span></span>
-                                    <span class="text-xs">Password: <span class="text-dark ms-sm-2 font-weight-bold">{{ k.password }}</span></span>
+                                <div class="col-lg-4 col-md-6 mb-4 mt-2">
+                                    <div class="text-left text-xs">Username: <span class="text-dark ms-sm-2 font-weight-bold">{{ k.username }}</span></div>
+                                    <div class="text-left text-xs">Password: <span class="text-dark ms-sm-2 font-weight-bold">{{ k.password }}</span></div>
                                 </div>
                               {% endfor %}
                             </div>
