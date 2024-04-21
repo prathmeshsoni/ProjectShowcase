@@ -15,15 +15,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.conf import settings
-from django.conf.urls import url
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, re_path, include
 from django.views.static import serve
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
+    path('admin/login/', auth_views.LoginView.as_view(template_name='login.html'), name='admin_login'),
     path("admin/", admin.site.urls),
     path("", include("FrontEndSide.urls")),
-    url(r'^uploads/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
+    re_path(r'^uploads/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
 ]
 
 # handler404 = "User.views.page_not_found_view"

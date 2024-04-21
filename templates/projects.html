@@ -10,7 +10,7 @@
   <link rel="shortcut icon" href="{% static 'assets/img/logo-mini-projectshowcase.png' %}">
   <link rel="icon" href="{% static 'assets/img/logo-mini-projectshowcase.png' %}" type="image/x-icon">
   
-  <title> Prathmesh Soni | Projects </title>
+  <title> ProjectShowcase </title>
   
   <meta name="author" content="Prathmesh Soni"/>
   <meta name="description" content="Display project overviews, detailed descriptions, secure password storage, and screenshots in a user-friendly website."/>
@@ -149,26 +149,30 @@
                   <img class="mr-2 transform hover:rotate-360 hover:scale-75 transition-transform duration-500 header__logo-img"
                     src="{% static 'assets/img/logo-mini-projectshowcase.png' %}" width="60">
                 </div>
-                  <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">P</span>
-                  <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">r</span>
-                  <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">a</span>
-                  <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">t</span>
-                  <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">h</span>
-                  <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">m</span>
-                  <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">e</span>
-                  <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">s</span>
-                  <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">h</span>
-                  <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">S</span>
-                  <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">o</span>
-                  <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">n</span>
-                  <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">i</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">P</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">r</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">o</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">j</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">e</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">c</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">t</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">S</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">h</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">o</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">w</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">c</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">a</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">s</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">e</span>
             </li>
             <ul class="flex items-center space-x-10 me-2">
               <li class="list-none text-white opacity-100"><a href="/">Home</a></li>
+              <li class="list-none text-white opacity-100 opacity-40 hover:opacity-100 transition-opacity"><a href="/admin/FrontEndSide/projectmodel/add/">Add Project</a></li>
               {% if request.user.is_authenticated %}
                 <li class="list-none text-white opacity-100 opacity-40 hover:opacity-100 transition-opacity"><a href="/admin/">Admin Panel</a></li>
               {% else %}
                 <li class="list-none text-white opacity-100 opacity-40 hover:opacity-100 transition-opacity"><a href="/login/">Login</a></li>
+                <li class="list-none text-white opacity-100 opacity-40 hover:opacity-100 transition-opacity"><a href="/register/">Register</a></li>
               {% endif %}
             </ul>
           </nav>
@@ -185,17 +189,19 @@
                       </div>
                       <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">P</span>
                       <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">r</span>
-                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">a</span>
-                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">t</span>
-                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">h</span>
-                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">m</span>
-                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">e</span>
-                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">s</span>
-                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">h</span>
-                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">S</span>
                       <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">o</span>
-                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">n</span>
-                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">i</span>
+                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">j</span>
+                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">e</span>
+                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">c</span>
+                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">t</span>
+                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">S</span>
+                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">h</span>
+                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">o</span>
+                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">w</span>
+                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">c</span>
+                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">a</span>
+                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">s</span>
+                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">e</span>
                     </span>
                   </li>
                   <button class="burger visible md:hidden" aria-label="Toggle menu" type="button">
@@ -211,12 +217,18 @@
               <ul class="menu flex flex-col absolute bg-bg menuRendered" id="check_1" style="display: none;">
                 <li class="border-b border-gray-900 text-gray-100 text-sm font-semibold hover:opacity-100 transition-opacity" style="transition-delay: 150ms;"><a
                   class="flex w-auto pb-4" href="/">Home</a></li>
+                <li class="border-b border-gray-900 text-gray-100 text-sm font-semibold hover:opacity-100 transition-opacity" style="transition-delay: 150ms;"><a
+                  class="flex w-auto pb-4" href="/admin/FrontEndSide/projectmodel/add/">Add Project</a></li>
                 {% if request.user.is_authenticated %}
                   <li class="border-b border-gray-900 text-gray-100 text-sm font-semibold hover:opacity-100 transition-opacity" style="transition-delay: 200ms;"><a
                           class="opacity-40 flex w-auto pb-4" href="/admin/">Admin Penal</a></li>
                 {% else %}
                   <li class="border-b border-gray-900 text-gray-100 text-sm font-semibold hover:opacity-100 transition-opacity" style="transition-delay: 200ms;"><a
                           class="opacity-40 flex w-auto pb-4" href="/login/">Login</a></li>
+                  <li class="border-b border-gray-900 text-gray-100 text-sm font-semibold hover:opacity-100 transition-opacity" style="transition-delay: 200ms;"><a
+                            class="opacity-40 flex w-auto pb-4" href="/register/">Register</a></li>
+                  <li class="border-b border-gray-900 text-gray-100 text-sm font-semibold hover:opacity-100 transition-opacity" style="transition-delay: 200ms;"><a
+                            class="opacity-40 flex w-auto pb-4" href="/admin/FrontEndSide/projectmodel/add/">Add Project</a></li>
                 {% endif %}
             </ul>
           </nav>
@@ -286,7 +298,7 @@
                   </p>
                   <hr class="horizontal light">
                   
-                  {% if request.user.is_authenticated %}
+                  {% if request.user.is_authenticated and request.user.id == i.user.id %}
                   <div class="d-flex">
                     <div class="float-start">
                       <button type="button" class="btn btn-info ms-2 py-1 px-2"
@@ -307,7 +319,7 @@
                       </button>
                     </div>
                     <div class="ms-auto my-auto">
-                      <button type="button" class="btn btn-info me-2 py-1 px-2"
+                      <button type="button" class="btn btn-info me-2 py-1 px-2" title="Edit Project"
                         style="--tw-bg-opacity: 1; background-color: rgb(25 39 66 / var(--tw-bg-opacity));" onclick="window.open('/admin/FrontEndSide/projectmodel/{{ i.id }}/change/', '_blank')"> 
                         <i class="fas fa-edit" style="color: #00c7ff;"></i>
                       </button>
@@ -325,6 +337,24 @@
                       {% endfor %}
                     </div>
                   </div>
+
+                  {% if not i.author|lower == 'prathmesh' %}
+                    <hr class="horizontal light">
+
+                    <div class="row">
+                      <div class="display-flex text-end pe-4">
+                        -
+                        <span class="text-xs text-fun-gray " style="font-size: 0.8rem !important;font-family: 'bootstrap-icons';">
+                          Developed by
+                        </span>
+                        <a href="javascript:void(0)" class="text-dark font-weight-bold"
+                           style="font-family: 'bootstrap-icons';">
+                          {{ i.author|title }}
+                        </a>
+                      </div>
+                    </div>
+                  {% endif %}
+
                 </div>
               </div>
             </div>

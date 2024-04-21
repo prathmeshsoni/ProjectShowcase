@@ -10,7 +10,7 @@
   <link rel="shortcut icon" href="{% static 'assets/img/logo-mini-projectshowcase.png' %}">
   <link rel="icon" href="{% static 'assets/img/logo-mini-projectshowcase.png' %}" type="image/x-icon">
   
-  <title> Prathmesh Soni | {{ project.title|title }} </title>
+  <title> {{ project.title|title }} | ProjectShowcase </title>
   
   <meta name="author" content="Prathmesh Soni"/>
   <meta name="description" content="Display project overviews, detailed descriptions, secure password storage, and screenshots in a user-friendly website."/>
@@ -150,27 +150,31 @@
                   <img class="mr-2 transform hover:rotate-360 hover:scale-75 transition-transform duration-500 header__logo-img"
                     src="{% static 'assets/img/logo-mini-projectshowcase.png' %}" width="60">
                 </div>
-                  <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">P</span>
-                  <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">r</span>
-                  <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">a</span>
-                  <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">t</span>
-                  <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">h</span>
-                  <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">m</span>
-                  <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">e</span>
-                  <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">s</span>
-                  <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">h</span>
-                  <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">S</span>
-                  <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">o</span>
-                  <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">n</span>
-                  <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">i</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">P</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">r</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">o</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">j</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">e</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">c</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">t</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">S</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">h</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">o</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">w</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">c</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">a</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">s</span>
+                <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">e</span>
             </li>
             <ul class="flex items-center space-x-10 me-2">
               <li class="list-none text-white opacity-100 opacity-40 hover:opacity-100 transition-opacity"><a href="/">Home</a></li>
               <li class="list-none text-white opacity-100"><a href="{{ project.slug_url }}">Projects</a></li>
+              <li class="list-none text-white opacity-100 opacity-40 hover:opacity-100 transition-opacity"><a href="/admin/FrontEndSide/projectmodel/add/">Add Project</a></li>
               {% if request.user.is_authenticated %}
                 <li class="list-none text-white opacity-100 opacity-40 hover:opacity-100 transition-opacity"><a href="/admin/">Admin Panel</a></li>
               {% else %}
                 <li class="list-none text-white opacity-100 opacity-40 hover:opacity-100 transition-opacity"><a href="/login/">Login</a></li>
+                <li class="list-none text-white opacity-100 opacity-40 hover:opacity-100 transition-opacity"><a href="/register/">Register</a></li>
               {% endif %}
             </ul>
           </nav>
@@ -187,17 +191,19 @@
                       </div>
                       <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">P</span>
                       <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">r</span>
-                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">a</span>
-                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">t</span>
-                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">h</span>
-                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">m</span>
-                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">e</span>
-                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">s</span>
-                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">h</span>
-                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">S</span>
                       <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">o</span>
-                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">n</span>
-                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">i</span>
+                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">j</span>
+                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">e</span>
+                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">c</span>
+                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">t</span>
+                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">S</span>
+                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">h</span>
+                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">o</span>
+                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">w</span>
+                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">c</span>
+                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">a</span>
+                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">s</span>
+                      <span class="hover:text-fun-pink hover:-mt-2 transition-all duration-500 hover:duration-100 click:goodbyeLetterAnim">e</span>
                     </span>
                   </li>
                   <button class="burger visible md:hidden" aria-label="Toggle menu" type="button">
@@ -212,16 +218,23 @@
               </div>
               <ul class="menu flex flex-col absolute bg-bg menuRendered" id="check_1" style="display: none;">
                 <li class="opacity-40 border-b border-gray-900 text-gray-100 text-sm font-semibold hover:opacity-100 transition-opacity" style="transition-delay: 150ms;"><a
-                        class="opacity-40 flex w-auto pb-4" href="/">Home</a></li>
+                  class="opacity-40 flex w-auto pb-4" href="/">Home</a></li>
                 <li class="border-b border-gray-900 text-gray-100 text-sm font-semibold" style="transition-delay: 175ms;"><a
-                        class="flex w-auto pb-4" href="{{ project.pro_url }}">Projects</a></li>
-              {% if request.user.is_authenticated %}
-                <li class="border-b border-gray-900 text-gray-100 text-sm font-semibold hover:opacity-100 transition-opacity" style="transition-delay: 200ms;"><a
-                        class="opacity-40 flex w-auto pb-4" href="/admin/">Admin Penal</a></li>
-              {% else %}
-                <li class="border-b border-gray-900 text-gray-100 text-sm font-semibold hover:opacity-100 transition-opacity" style="transition-delay: 200ms;"><a
-                        class="opacity-40 flex w-auto pb-4" href="/login/">Login</a></li>
-              {% endif %}
+                  class="flex w-auto pb-4" href="{{ project.pro_url }}">Projects</a></li>
+                <li class="border-b border-gray-900 text-gray-100 text-sm font-semibold hover:opacity-100 transition-opacity" style="transition-delay: 150ms;"><a
+                  class="flex w-auto pb-4" href="/admin/FrontEndSide/projectmodel/add/">Add Project</a></li>
+                {% if request.user.is_authenticated %}
+                  <li class="border-b border-gray-900 text-gray-100 text-sm font-semibold hover:opacity-100 transition-opacity" style="transition-delay: 200ms;"><a
+                          class="opacity-40 flex w-auto pb-4" href="/admin/">Admin Penal</a></li>
+                {% else %}
+                  <li class="border-b border-gray-900 text-gray-100 text-sm font-semibold hover:opacity-100 transition-opacity" style="transition-delay: 200ms;"><a
+                          class="opacity-40 flex w-auto pb-4" href="/login/">Login</a></li>
+                  <li class="border-b border-gray-900 text-gray-100 text-sm font-semibold hover:opacity-100 transition-opacity" style="transition-delay: 200ms;"><a
+                            class="opacity-40 flex w-auto pb-4" href="/register/">Register</a></li>
+                  <li class="border-b border-gray-900 text-gray-100 text-sm font-semibold hover:opacity-100 transition-opacity" style="transition-delay: 200ms;"><a
+                            class="opacity-40 flex w-auto pb-4" href="/admin/FrontEndSide/projectmodel/add/">Add Project</a></li>
+                {% endif %}
+            </ul>
             </ul>
           </nav>
       </div>
@@ -278,9 +291,10 @@
               <p class="ms-3 me-3 text-sm mt-3 text-justify">
                 {{ project.description_1 }}
               </p>
+
               <hr class="horizontal light">
               
-              {% if request.user.is_authenticated %}
+              {% if request.user.is_authenticated and request.user.id == project.user.id %}
                 <div class="d-flex">
                   <div class="float-start">
                     <button type="button" class="btn btn-info ms-2 py-1 px-2"
@@ -301,7 +315,7 @@
                     </button>
                   </div>
                   <div class="ms-auto my-auto">
-                    <button type="button" class="btn btn-info me-3 py-1 px-2"
+                    <button type="button" class="btn btn-info me-3 py-1 px-2" title="Edit Project"
                       style="--tw-bg-opacity: 1; background-color: rgb(25 39 66 / var(--tw-bg-opacity));" onclick="window.open('/admin/FrontEndSide/projectmodel/{{ project.id }}/change/', '_blank')"> 
                       <i class="fas fa-edit" style="color: #00c7ff;"></i>
                     </button>
@@ -319,6 +333,22 @@
                   {% endfor %}
                 </div>
               </div>
+
+              <hr class="horizontal light">
+
+              <div class="row">
+                <div class="display-flex text-end pe-4">
+                  -
+                  <span class="text-xs text-fun-gray " style="font-size: 0.8rem !important;font-family: 'bootstrap-icons';">
+                    Developed by
+                  </span>
+                  <a href="javascript:void(0)" class="text-dark font-weight-bold"
+                     style="font-family: 'bootstrap-icons';">
+                    {{ project.author|title }}
+                  </a>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -336,18 +366,20 @@
                     </div>
                     <div class="ms-auto my-auto">
                       <div class="dropdown">
-                        {% if i.platform_url and request.user.is_authenticated %}
+                        {% if i.platform_url and request.user.is_authenticated and request.user.id == project.user.id %}
                         <a class="btn btn-link text-secondary ps-0 pe-2 mb-0" href="{{ i.platform_url }}" target="_blank">
                           <span>
                             {% if i.platform|lower == 'vercel' %}
-                            <img src="{% static 'assets/img/vercel.svg' %}" width="22">
+                              <img src="{% static 'assets/img/vercel.svg' %}" width="22">
+                            {% elif i.platform|lower == 'pythonanywhere' %}
+                              <img src="{% static 'assets/img/pythonanywhere.svg' %}" width="30">
                             {% else %}
-                            <img src="{% static 'assets/img/pythonanywhere.svg' %}" width="30">
+                              <i class="fas fa-circle" style="color: #00c7ff;"></i>
                             {% endif %}
                           </span>
                         </a>
                         {% endif %}
-                        {% if i.github and request.user.is_authenticated %}
+                        {% if i.github and request.user.is_authenticated and request.user.id == project.user.id %}
                         <a class="btn btn-link text-secondary ps-0 pe-2 mb-0" href="{{ i.github }}" target="_blank">
                           <span>
                             <img src="{% static 'assets/img/github.svg' %}">
@@ -367,7 +399,7 @@
                   
                   <div class="d-flex">
                     <div class="float-start">
-                      {% if request.user.is_authenticated %}
+                      {% if request.user.is_authenticated and request.user.id == project.user.id %}
                         <button type="button" class="btn btn-info ms-2 py-1 px-2 my-1"
                           style="--tw-bg-opacity: 1; background-color: rgb(25 39 66 / var(--tw-bg-opacity));">
                           {% if i.private %}
@@ -382,9 +414,9 @@
                           {{ i.pro_url }}
                       </button>
                     </div>
-                    {% if request.user.is_authenticated %}
+                    {% if request.user.is_authenticated and request.user.id == project.user.id %}
                       <div class="ms-auto my-auto">
-                        <button type="button" class="btn btn-info me-1 py-1 px-2 my-1"
+                        <button type="button" class="btn btn-info me-1 py-1 px-2 my-1" title="Edit"
                           style="--tw-bg-opacity: 1; background-color: rgb(25 39 66 / var(--tw-bg-opacity));" onclick="window.open('/admin/FrontEndSide/projectlivemodel/{{ i.id }}/change/', '_blank')"> 
                           <i class="fas fa-edit" style="color: #00c7ff;"></i>
                         </button>
@@ -394,7 +426,7 @@
                   
                   <hr class="horizontal light">
 
-                  {% if request.user.is_authenticated and i.credentials.all %}
+                  {% if request.user.is_authenticated and i.credentials.all and request.user.id == project.user.id %}
 
                   <div class="">
                     <div class="mt-2 ms-auto">
