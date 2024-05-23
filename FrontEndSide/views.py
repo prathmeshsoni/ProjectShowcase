@@ -105,6 +105,11 @@ def project_details(request, url):
         projects_obj = ProjectModel.objects.get(slug_url=url)
     except ProjectModel.DoesNotExist:
         return redirect('home')
+
+    if projects_obj.private:
+        if not projects_obj.user == request.user:
+            return redirect('home')
+    
     if request.user.is_authenticated:
         if request.user.is_superuser:
             live_obj = ProjectLiveModel.objects.filter(project=projects_obj.id)
