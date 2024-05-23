@@ -29,7 +29,7 @@ Project Showcase is a dynamic website designed to display project overviews alon
 ## Effortlessly Showcase and Manage Your Projects
 Project Showcase simplifies the presentation of your projects, offering a secure platform to store passwords and display detailed descriptions with screenshots. Its user-friendly interface ensures an engaging experience for both creators and viewers.
 
-Explore Project Showcase now at [here](https://projectshowcase.prathmeshsoni.works) 🌐🚀
+Explore Project Showcase now at <a href="https://ProjectShowcase.prathmeshsoni.works?ref=here-button" target="_blank">here</a> 🌐🚀
 
 ## All Set :)
 
